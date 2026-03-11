@@ -6,7 +6,7 @@ export default function AmbientSound() {
   const audioRef = useRef(null)
 
   useEffect(() => {
-    const audio = new Audio('/media/audio/ambient.mp3')
+    const audio = new Audio(`${import.meta.env.BASE_URL}media/audio/ambient.mp3`)
     audio.loop = true
     audio.volume = 0.3
     audioRef.current = audio
@@ -69,3 +69,4 @@ export default function AmbientSound() {
     </button>
   )
 }
+
