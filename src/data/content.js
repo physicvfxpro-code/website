@@ -1,4 +1,9 @@
 // ─────────────────────────────────────────
+// BASE URL (Vite injects the base path)
+// ─────────────────────────────────────────
+const BASE = import.meta.env.BASE_URL
+
+// ─────────────────────────────────────────
 // HELPER
 // ─────────────────────────────────────────
 export const t = (obj, lang) => {
@@ -50,19 +55,19 @@ export const HERO_SLIDES = [
 //       → remplace par ex. '/media/portfolio/aventador-sunset.jpg' ou '/media/portfolio/aventador-sunset.mp4'
 export const PORTFOLIO_ITEMS = [
   { id: 1,  type: 'photo', src: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=85',  cat: { fr: 'Cinématique', en: 'Cinematic' },  title: 'Aventador Sunset',   tall: false },
-  { id: 2,  type: 'video', src: '/media/portfolio/porsche-pursuit.mp4',  cat: { fr: 'Rolling Shot', en: 'Rolling Shot' },  title: 'Porsche Pursuit',    tall: true  },
+  { id: 2,  type: 'video', src: `${BASE}media/portfolio/porsche-pursuit.mp4`,  cat: { fr: 'Rolling Shot', en: 'Rolling Shot' },  title: 'Porsche Pursuit',    tall: true  },
   { id: 3,  type: 'photo', src: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=85',  cat: { fr: 'Dynamique', en: 'Dynamic' },  title: 'Red Fury',           tall: false },
   { id: 4,  type: 'photo', src: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=85',  cat: { fr: 'Supercars', en: 'Supercars' },     title: 'Shadow Class',       tall: false },
-  { id: 5,  type: 'video', src: '/media/portfolio/midnight-run.mp4',     cat: { fr: 'Nocturne', en: 'Night' },     title: 'Midnight Run',       tall: false },
+  { id: 5,  type: 'video', src: `${BASE}media/portfolio/midnight-run.mp4`,     cat: { fr: 'Nocturne', en: 'Night' },     title: 'Midnight Run',       tall: false },
   { id: 6,  type: 'photo', src: 'https://images.unsplash.com/photo-1525609004556-c46c6c5104b8?w=800&q=85',  cat: { fr: 'Cinématique', en: 'Cinematic' },  title: 'Ferrari Dreams',     tall: true  },
-  { id: 7,  type: 'video', src: '/media/portfolio/m4-smoke.mp4',         cat: { fr: 'Drift', en: 'Drift' },         title: 'M4 Smoke',           tall: false },
+  { id: 7,  type: 'video', src: `${BASE}media/portfolio/m4-smoke.mp4`,         cat: { fr: 'Drift', en: 'Drift' },         title: 'M4 Smoke',           tall: false },
   { id: 8,  type: 'photo', src: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=85',   cat: { fr: 'Rolling Shot', en: 'Rolling Shot' },  title: 'Highway Flow',       tall: false },
   { id: 9,  type: 'photo', src: 'https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=800&q=85',   cat: { fr: 'Dynamique', en: 'Dynamic' },  title: 'Mustang Spirit',     tall: true  },
   { id: 10, type: 'photo', src: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&q=85',   cat: { fr: 'Supercars', en: 'Supercars' },     title: 'Rosso Corsa',        tall: false },
-  { id: 11, type: 'video', src: '/media/portfolio/blue-hour.mp4',        cat: { fr: 'Nocturne', en: 'Night' },     title: 'Blue Hour',          tall: false },
+  { id: 11, type: 'video', src: `${BASE}media/portfolio/blue-hour.mp4`,        cat: { fr: 'Nocturne', en: 'Night' },     title: 'Blue Hour',          tall: false },
   { id: 12, type: 'photo', src: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&q=85',   cat: { fr: 'Événement', en: 'Event' },    title: 'Track Day',          tall: false },
   { id: 13, type: 'photo', src: 'https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=85',      cat: { fr: 'Nocturne', en: 'Night' },     title: 'GT-R After Dark',    tall: false },
-  { id: 14, type: 'video', src: '/media/portfolio/lateral-force.mp4',    cat: { fr: 'Drift', en: 'Drift' },         title: 'Lateral Force',      tall: true  },
+  { id: 14, type: 'video', src: `${BASE}media/portfolio/lateral-force.mp4`,    cat: { fr: 'Drift', en: 'Drift' },         title: 'Lateral Force',      tall: true  },
   { id: 15, type: 'photo', src: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=85',   cat: { fr: 'Cinématique', en: 'Cinematic' },  title: 'Dark Horse',     tall: false },
   { id: 16, type: 'photo', src: 'https://images.unsplash.com/photo-1514316703755-dca7d7d9d882?w=800&q=85',   cat: { fr: 'Événement', en: 'Event' },    title: 'Light Trails',       tall: false },
 ]
@@ -190,7 +195,7 @@ export const PRODUCTS = [
     badge: 'Best-seller',
     desc: { fr: 'Tons cinématiques chauds et contrastés. Parfait pour sublimer vos vidéos automobiles.', en: 'Warm cinematic tones with contrast. Perfect to elevate your automotive videos.' },
     filter: 'LUTs',
-    file: '/downloads/cinematic-car-luts.zip',
+    file: `${BASE}downloads/cinematic-car-luts.zip`,
     features: {
       fr: ['12 fichiers .cube compatibles', 'DaVinci Resolve & Premiere Pro', 'Guide d\'installation PDF', 'Avant / Après inclus'],
       en: ['12 compatible .cube files', 'DaVinci Resolve & Premiere Pro', 'PDF installation guide', 'Before / After included'],
@@ -204,7 +209,7 @@ export const PRODUCTS = [
     badge: { fr: 'Nouveau', en: 'New' },
     desc: { fr: 'Contrastes profonds et tons froids. Idéal pour les shoots de nuit et ambiances sombres.', en: 'Deep contrasts and cold tones. Ideal for night shoots and dark mood.' },
     filter: 'LUTs',
-    file: '/downloads/moody-night-luts.zip',
+    file: `${BASE}downloads/moody-night-luts.zip`,
     features: {
       fr: ['10 fichiers .cube', 'Optimisé pour les scènes nocturnes', 'Compatible DaVinci & Premiere', 'Licence usage commercial'],
       en: ['10 .cube files', 'Optimized for night scenes', 'Compatible DaVinci & Premiere', 'Commercial use license'],
@@ -218,7 +223,7 @@ export const PRODUCTS = [
     badge: null,
     desc: { fr: 'Transitions fluides et dynamiques pour donner du rythme à vos montages auto.', en: 'Smooth, dynamic transitions to give rhythm to your automotive edits.' },
     filter: { fr: 'Transitions', en: 'Transitions' },
-    file: '/downloads/pack-transitions.zip',
+    file: `${BASE}downloads/pack-transitions.zip`,
     features: {
       fr: ['25 transitions uniques', 'Glitch, Zoom, Whip, Flash', 'Fichiers .mogrt Premiere Pro', 'Tutoriel vidéo inclus'],
       en: ['25 unique transitions', 'Glitch, Zoom, Whip, Flash', '.mogrt files for Premiere Pro', 'Video tutorial included'],
@@ -232,7 +237,7 @@ export const PRODUCTS = [
     badge: null,
     desc: { fr: "Bruits moteur, whooshes, impacts et ambiances. Tout pour un sound design automobile pro.", en: "Engine sounds, whooshes, impacts and atmospheres. Everything for pro automotive sound design." },
     filter: 'SFX',
-    file: '/downloads/sound-design-pack.zip',
+    file: `${BASE}downloads/sound-design-pack.zip`,
     features: {
       fr: ['50+ fichiers WAV haute qualité', 'Moteurs, whooshes, impacts', 'Ambiances circuit & garage', 'Licence libre de droits'],
       en: ['50+ high quality WAV files', 'Engines, whooshes, impacts', 'Track & garage atmospheres', 'Royalty-free license'],
@@ -246,7 +251,7 @@ export const PRODUCTS = [
     badge: { fr: 'Économie', en: 'Save' },
     desc: { fr: "L'intégralité de la bibliothèque : LUTs, transitions, SFX. Le kit ultime.", en: "The entire library: LUTs, transitions, SFX. The ultimate kit." },
     filter: 'Collection',
-    file: '/downloads/collection-complete.zip',
+    file: `${BASE}downloads/collection-complete.zip`,
     features: {
       fr: ['22 LUTs cinématiques', '25 transitions Premiere', '50+ effets sonores', 'Économisez 42 € vs achat séparé', 'Mises à jour à vie'],
       en: ['22 cinematic LUTs', '25 Premiere transitions', '50+ sound effects', 'Save €42 vs separate purchase', 'Lifetime updates'],
@@ -260,7 +265,7 @@ export const PRODUCTS = [
     badge: { fr: 'Places limitées', en: 'Limited spots' },
     desc: { fr: "Retour sur votre travail, conseils techniques de tournage et montage, Q&A en direct.", en: "Feedback on your work, shooting and editing tips, live Q&A." },
     filter: { fr: 'Mentorat', en: 'Mentoring' },
-    file: '/downloads/mentorat-confirmation.zip',
+    file: `${BASE}downloads/mentorat-confirmation.zip`,
     features: {
       fr: ['1h de visio en direct', 'Retour personnalisé sur votre travail', 'Conseils tournage & montage', 'Replay de la session inclus'],
       en: ['1h live video call', 'Personalized feedback on your work', 'Shooting & editing tips', 'Session replay included'],
