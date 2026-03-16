@@ -76,7 +76,7 @@ export default function App() {
     <HelmetProvider>
       <ThemeProvider>
         <MusicProvider>
-          <BrowserRouter>
+          <BrowserRouter basename="/website">
             {visible && <Loader fading={!loading} />}
             <AppLayout />
           </BrowserRouter>
