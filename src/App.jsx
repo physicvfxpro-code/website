@@ -15,7 +15,7 @@ import Services from './pages/Services'
 import Tools from './pages/Tools'
 import Contact from './pages/Contact'
 import Legal from './pages/Legal'
-import privacy from './pages/Privacy'
+import Privacy from './pages/privacy'
 import NotFound from './pages/404'
 import { useSmoothScroll } from './hooks/useSmoothScroll'
 
